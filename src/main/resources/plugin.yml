@@ -1,0 +1,48 @@
+name: EternalRelics
+version: 1.0.0
+description: A legendary items and faction conflict plugin for Paper 1.21.11
+main: dev.eternalrelics.EternalRelicsPlugin
+api-version: 1.21
+
+authors:
+  - ItzEnea
+
+commands:
+  altar:
+    description: Manage altar placements and status
+    usage: /altar <helmet|chestplate|leggings|boots|weapon|open|close|status>
+    permission: eternalrelics.admin
+  
+  event:
+    description: Manage events and fragment spawning
+    usage: /event <helmet|chestplate|leggings|boots|awakening|weapon>
+    permission: eternalrelics.admin
+  
+  void:
+    description: Void faction commands
+    usage: /void <awaken>
+    permission: eternalrelics.admin
+  
+  king:
+    description: Set the human king
+    usage: /king <player>
+    permission: eternalrelics.admin
+  
+  recipes:
+    description: Open the legendary recipes GUI
+    usage: /recipes
+    permission: eternalrelics.player
+  
+  relic:
+    description: Relic of Convergence commands
+    usage: /relic <place|status>
+    permission: eternalrelics.admin
+
+permissions:
+  eternalrelics.admin:
+    description: Full admin access to EternalRelics
+    default: op
+  
+  eternalrelics.player:
+    description: Player access to EternalRelics
+    default: true
