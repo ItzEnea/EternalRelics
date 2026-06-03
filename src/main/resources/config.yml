@@ -1,0 +1,340 @@
+# ========================================
+# EternalRelics Configuration
+# ========================================
+
+# Crafting Window Settings
+crafting:
+  # Time window for legendary crafting (24-hour format, CET)
+  enabled: true
+  start-hour: 16    # 16:00 CET (4 PM)
+  end-hour: 19      # 19:00 CET (7 PM)
+  timezone: "Europe/Paris"  # CET timezone
+  
+  # Broadcast messages
+  broadcasts:
+    enabled: true
+    times:
+      - 15:50
+      - 15:55
+      - 16:00
+      - 18:50
+      - 18:55
+      - 19:00
+    messages:
+      opening: "§6[⚔] §fThe legendary altars awaken! Crafting is now possible."
+      closing: "§6[⚔] §fThe altars grow dormant once more..."
+      dormant: "§7The altar is dormant. Legendary crafting is only possible between 16:00 and 19:00 CET."
+
+# Fragment Event Settings
+events:
+  # Fragment spawning configuration
+  fragments:
+    enabled: true
+    # Drop chance per source (0.0 - 1.0)
+    drop-chance: 0.15
+    
+    # Maximum concurrent fragments
+    spawn-caps:
+      "Fragment of the Sun": 1
+      "Fragment of the Heart": 1
+      "Fragment of Time": 1
+      "Fragment of Gold": 1
+    
+    # Fragment sources
+    sources:
+      ominous-vaults: true
+      wardens: true
+      withers: true
+      vaults: true
+    
+    # Fragment holder tracking broadcast interval (ticks)
+    # 50 seconds = 1000 ticks
+    tracking-interval: 1000
+    tracking-message: "§6[⚔] §f{player} §7holds §f{fragment} §7at §6{x} {y} {z}"
+    
+    # Broadcast format for holder tracking
+    tracking-prefix: "§6[Fragment Tracker]"
+
+# Armor Configuration
+armor:
+  # Sun Crown (Helmet)
+  sun-crown:
+    enabled: true
+    model-data: 1001
+    cooldown-seconds: 5
+    movement-speed: 0.3
+    damage: false
+  
+  # Heart of Avaritia (Chestplate)
+  heart-avaritia:
+    enabled: true
+    model-data: 1002
+    cooldown-seconds: 10
+    heal-amount: 4.0  # half hearts
+    trigger-health-percentage: 0.5  # Trigger at 50% health
+  
+  # Golden Time Steppers (Leggings)
+  time-steppers:
+    enabled: true
+    model-data: 1003
+    cooldown-seconds: 8
+    double-jump-height: 1.2
+    velocity-multiplier: 1.5
+  
+  # Footsteps of Midas (Boots)
+  midas-boots:
+    enabled: true
+    model-data: 1004
+    cooldown-seconds: 15
+    explosion-strength: 2.0
+    true-damage: 20.0
+
+# Weapon Configuration
+weapons:
+  # Frostwind Bow
+  frostwind-bow:
+    enabled: true
+    model-data: 2001
+    cooldown-seconds: 3
+    projectile-speed: 1.5
+    freeze-duration: 100  # ticks
+    true-damage: 15.0
+  
+  # Voidguard Shield
+  voidguard-shield:
+    enabled: true
+    model-data: 2002
+    cooldown-seconds: 5
+    absorption-amount: 8.0
+    void-reflection: 0.5
+  
+  # Ironhowl
+  ironhowl:
+    enabled: true
+    model-data: 2003
+    cooldown-seconds: 4
+    stun-duration: 60  # ticks
+    true-damage: 25.0
+  
+  # Bonecracker
+  bonecracker:
+    enabled: true
+    model-data: 2004
+    cooldown-seconds: 6
+    crit-multiplier: 2.5
+    true-damage: 20.0
+  
+  # Abyssal Sword
+  abyssal-sword:
+    enabled: true
+    model-data: 2005
+    cooldown-seconds: 4
+    life-steal: 0.25
+    true-damage: 22.0
+  
+  # Phantom Edge
+  phantom-edge:
+    enabled: true
+    model-data: 2006
+    cooldown-seconds: 3
+    true-damage: 18.0
+    phantom-count: 3
+  
+  # Crystal Edge
+  crystal-edge:
+    enabled: true
+    model-data: 2007
+    cooldown-seconds: 5
+    true-damage: 20.0
+    shatter-radius: 5.0
+  
+  # Mooncleaver
+  mooncleaver:
+    enabled: true
+    model-data: 2008
+    cooldown-seconds: 6
+    lunar-damage: 25.0
+    true-damage: 20.0
+  
+  # Nightfang
+  nightfang:
+    enabled: true
+    model-data: 2009
+    cooldown-seconds: 4
+    true-damage: 20.0
+    shadow-clones: 2
+  
+  # Ghostthorn
+  ghostthorn:
+    enabled: true
+    model-data: 2010
+    cooldown-seconds: 5
+    true-damage: 18.0
+    phase-duration: 80  # ticks
+  
+  # Titan's Axe
+  titans-axe:
+    enabled: true
+    model-data: 2011
+    cooldown-seconds: 8
+    true-damage: 30.0
+    knockback-strength: 2.0
+  
+  # Oblivion Cleaver
+  oblivion-cleaver:
+    enabled: true
+    model-data: 2012
+    cooldown-seconds: 10
+    true-damage: 32.0
+    black-hole-radius: 8.0
+  
+  # Thundermaul
+  thundermaul:
+    enabled: true
+    model-data: 2013
+    cooldown-seconds: 7
+    true-damage: 25.0
+    lightning-strikes: 3
+  
+  # Sunreaver
+  sunreaver:
+    enabled: true
+    model-data: 2014
+    cooldown-seconds: 6
+    true-damage: 23.0
+    solar-flare-radius: 6.0
+  
+  # Void Harvest
+  void-harvest:
+    enabled: true
+    model-data: 2015
+    cooldown-seconds: 9
+    true-damage: 28.0
+    void-pull-radius: 7.0
+
+# Faction Configuration
+factions:
+  enabled: true
+  
+  # Faction colors
+  colors:
+    HUMAN: "§f"
+    CULT: "§c"
+    VOID: "§5"
+  
+  # Faction chat prefix
+  chat-prefix:
+    HUMAN: "§f[HUMAN]"
+    CULT: "§c[CULT]"
+    VOID: "§5[VOID]"
+  
+  # Faction passives
+  passives:
+    HUMAN:
+      regeneration-level: 2
+      resistance-level: 1
+    CULT:
+      speed-level: 1
+      strength-level: 1
+    VOID:
+      invisibility: false
+      nightvision: true
+      strength-level: 2
+
+# Relic of Convergence
+relic:
+  enabled: true
+  model-data: 9001
+  
+  # Defense timer in seconds
+  defense-timer: 1800  # 30 minutes
+  
+  # Relic stats
+  health: 200.0
+  
+  # Victory broadcasts
+  victory-messages:
+    HUMAN: "§f[§6⚔§f] The Humans have seized the Relic of Convergence!"
+    CULT: "§c[§6⚔§c] The Cult has corrupted the Relic of Convergence!"
+    VOID: "§5[§6⚔§5] The Void has consumed the Relic of Convergence!"
+
+# Particle and VFX Settings
+particles:
+  enabled: true
+  
+  # Reduce particle count on high player servers
+  reduction-factor: 1.0  # 1.0 = normal, 0.5 = half particles
+  
+  # Held item particles
+  held-item-particles:
+    enabled: true
+    update-rate: 2  # ticks
+
+# Sound Settings
+sounds:
+  enabled: true
+  volume: 1.0
+  pitch: 1.0
+  
+  # Sound sources
+  altar-craft-start: "entity.beacon.activate"
+  altar-craft-complete: "entity.player.levelup"
+  altar-craft-fail: "entity.wither.spawn"
+  
+  # Ability sounds
+  ability-activate: "entity.player.attack.crit"
+  ability-cooldown: "block.note_block.bass"
+
+# Database Configuration
+database:
+  type: "json"  # "json" or "sqlite"
+  
+  # JSON storage settings
+  json:
+    directory: "data"
+    auto-save-interval: 6000  # ticks (5 minutes)
+  
+  # SQLite settings (for future use)
+  sqlite:
+    filename: "eternalrelics.db"
+    connection-pool-size: 5
+
+# Performance Settings
+performance:
+  # Maximum players before reducing particles
+  high-player-threshold: 80
+  
+  # Entity scan optimization
+  entity-scan-interval: 40  # ticks
+  
+  # Async task processing
+  async-enabled: true
+  thread-pool-size: 4
+
+# Message Settings
+messages:
+  prefix: "§6[⚔ EternalRelics]"
+  
+  # Item-related messages
+  item-already-exists: "§cThis relic already exists on the server."
+  item-created: "§a§f{item}§a has been crafted!"
+  
+  # Altar messages
+  altar-placed: "§aAltar placed successfully."
+  altar-removed: "§cAltar removed."
+  altar-status: "§6Currently: {status}"
+  
+  # Event messages
+  event-started: "§6Event started: {event}"
+  event-ended: "§cEvent ended: {event}"
+  
+  # Faction messages
+  faction-join: "§7You have joined the §f{faction}§7 faction."
+  faction-leave: "§7You have left the §f{faction}§7 faction."
+
+# Debug Settings
+debug:
+  enabled: false
+  verbose: false
+  log-item-events: false
+  log-ability-triggers: false
