@@ -1,0 +1,49 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "item/relic/relic_convergence",
+    "layer1": "item/relic/relic_convergence_emissive"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [0, 0, 0],
+      "translation": [0, 3, 0],
+      "scale": [2.0, 2.0, 2.0]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [0, 180, 0],
+      "translation": [0, 3, 0],
+      "scale": [2.0, 2.0, 2.0]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, 0, 0],
+      "translation": [0, 0, 0],
+      "scale": [1.5, 1.5, 1.5]
+    },
+    "firstperson_lefthand": {
+      "rotation": [0, 180, 0],
+      "translation": [0, 0, 0],
+      "scale": [1.5, 1.5, 1.5]
+    },
+    "gui": {
+      "rotation": [20, 30, 0],
+      "translation": [0, 0, 0],
+      "scale": [1.5, 1.5, 1.5]
+    },
+    "head": {
+      "rotation": [0, 0, 0],
+      "translation": [0, 0, 0],
+      "scale": [1.0, 1.0, 1.0]
+    },
+    "ground": {
+      "rotation": [0, 0, 0],
+      "translation": [0, 2, 0],
+      "scale": [1.0, 1.0, 1.0]
+    },
+    "fixed": {
+      "rotation": [0, 0, 0],
+      "translation": [0, 0, 0],
+      "scale": [1.0, 1.0, 1.0]
+    }
+  }
+}
